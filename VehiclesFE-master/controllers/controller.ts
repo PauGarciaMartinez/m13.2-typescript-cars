@@ -23,6 +23,9 @@ form.addEventListener('submit', (e: Event) => {
   values.push(plate.value);
   values.push(color.value);
   values.push(brand.value);
+
+  car = new Car(values[0], values[1], values[2]);
+  list.render(car, 'Car:');
 })
 
 /* function createCar(plate: string, brand: string, color: string) {

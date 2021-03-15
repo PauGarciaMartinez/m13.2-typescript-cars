@@ -1,3 +1,4 @@
+import { Car } from '../models/car.js';
 import { ListTemplate } from './listTemplate.js';
 // DOM 
 const form = document.querySelector('.form-container');
@@ -15,6 +16,8 @@ form.addEventListener('submit', (e) => {
     values.push(plate.value);
     values.push(color.value);
     values.push(brand.value);
+    car = new Car(values[0], values[1], values[2]);
+    list.render(car, 'Car:');
 });
 /* function createCar(plate: string, brand: string, color: string) {
     let car = new Car(plate, color, brand);
