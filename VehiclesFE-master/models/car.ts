@@ -1,4 +1,6 @@
-class Car {
+import { Wheel } from './wheel.js'
+
+export class Car {
     plate: string;
     color: string;
     brand: string;
@@ -12,5 +14,9 @@ class Car {
     
     addWheel(wheel: Wheel): void {
         this.wheels.push(wheel);
+    }
+
+    format() {
+      return `Brand: ${this.brand} - Color: ${this.color} - Plate: ${this.plate}`
     }
 }

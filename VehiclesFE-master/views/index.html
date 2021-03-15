@@ -6,35 +6,47 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
-      <script src="../models/car.js"></script>
-      <script src="../models/wheel.js"></script>
-      <script src="../controllers/controller.js"></script>  
+      <link rel="stylesheet" href="../styles/index.css">
+      <script type="module" src="../controllers/controller.js"></script>  
     </head>
 
     <body>
       <div class="wrapper">
 
-      <header class="header-container">
+      <header>
         <h1 class="title">Store your car</h1>
         <p class="subtitle">Register your vehicle</p>
       </header>
 
       <section>
-        <form action="">
+        <form class="form-container">
+
           <div class="form-group">
             <label for="plate">Plate</label>
             <input type="text" id="plate" name="plate">
           </div>
+
           <div class="form-group">
             <label for="brand">Brand</label>
             <input type="text" id="brand" name="brand">
           </div>
+
           <div class="form-group">
             <label for="color">Color</label>
             <input type="text" id="color" name="color">
           </div>
-          <button onclick="createCar('1212SDS','SEAT','ROJO')">Create car</button>
+
+          <button type="submit">Create car</button>
+
         </form>
+      </section>
+
+      <section>
+        <div class="cars-container">
+          <ul class="cars-list">
+
+          </ul>
+        </div>
       </section>
   
       </div>

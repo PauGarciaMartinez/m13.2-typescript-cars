@@ -1,13 +1,14 @@
-"use strict";
-var Car = /** @class */ (function () {
-    function Car(plate, color, brand) {
+export class Car {
+    constructor(plate, color, brand) {
         this.wheels = new Array();
         this.plate = plate;
         this.color = color;
         this.brand = brand;
     }
-    Car.prototype.addWheel = function (wheel) {
+    addWheel(wheel) {
         this.wheels.push(wheel);
-    };
-    return Car;
-}());
+    }
+    format() {
+        return `Brand: ${this.brand} - Color: ${this.color} - Plate: ${this.plate}`;
+    }
+}
