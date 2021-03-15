@@ -3,7 +3,8 @@ import { ListTemplate } from './listTemplate.js';
 
 
 // DOM 
-const form = document.querySelector('.form-container') as HTMLFormElement;
+const carForm = document.querySelector('.form-container-car') as HTMLFormElement;
+const wheelsForm = document.querySelector('.form-container-wheels') as HTMLFormElement;
 
 const plate = document.querySelector('#plate') as HTMLInputElement;
 const brand = document.querySelector('#brand') as HTMLInputElement;
@@ -17,7 +18,7 @@ let car: Car;
 let values: string[] = [];
 
 // SUBMIT
-form.addEventListener('submit', (e: Event) => {
+carForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 
   values.push(plate.value);
@@ -26,6 +27,9 @@ form.addEventListener('submit', (e: Event) => {
 
   car = new Car(values[0], values[1], values[2]);
   list.render(car, 'Car:');
+
+  carForm.classList.add('inactive')
+  wheelsForm.classList.add('active')
 })
 
 /* function createCar(plate: string, brand: string, color: string) {

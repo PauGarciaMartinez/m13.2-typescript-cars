@@ -22,7 +22,15 @@ body {
   text-align: center;
 }
 
-.form-container {
+.form-container-car {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.form-container-wheels {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,6 +58,14 @@ button:hover {
   cursor: pointer;
   background-color: #424242;
   color: white;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: flex;
 }
 
 .cars-list {

@@ -1,7 +1,8 @@
 import { Car } from '../models/car.js';
 import { ListTemplate } from './listTemplate.js';
 // DOM 
-const form = document.querySelector('.form-container');
+const carForm = document.querySelector('.form-container-car');
+const wheelsForm = document.querySelector('.form-container-wheels');
 const plate = document.querySelector('#plate');
 const brand = document.querySelector('#brand');
 const color = document.querySelector('#color');
@@ -11,13 +12,15 @@ const list = new ListTemplate(ul);
 let car;
 let values = [];
 // SUBMIT
-form.addEventListener('submit', (e) => {
+carForm.addEventListener('submit', (e) => {
     e.preventDefault();
     values.push(plate.value);
     values.push(color.value);
     values.push(brand.value);
     car = new Car(values[0], values[1], values[2]);
     list.render(car, 'Car:');
+    carForm.classList.add('inactive');
+    wheelsForm.classList.add('active');
 });
 /* function createCar(plate: string, brand: string, color: string) {
     let car = new Car(plate, color, brand);

@@ -26,7 +26,15 @@ body {
 }
 
 // FORM
-.form-container {
+.form-container-car {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.form-container-wheels {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,6 +62,14 @@ button:hover {
   cursor: pointer;
   background-color: rgb(66, 66, 66);
   color: white;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: flex;
 }
 
 // LIST 
