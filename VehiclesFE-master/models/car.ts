@@ -26,7 +26,7 @@ export class Car {
   formatWheels() {
     let displayWheels = this.wheels.map((wheel, index) => {
       return ` 
-      ${index} - Brand: ${wheel.brand} - Diameter: ${wheel.diameter}`;
+      ${++index} - Brand: ${wheel.brand} - Diameter: ${wheel.diameter}`;
     })
     return displayWheels.toString();
   }
