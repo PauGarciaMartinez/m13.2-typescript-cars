@@ -78,4 +78,22 @@ button:hover {
   list-style: none;
 }
 
+small {
+  visibility: hidden;
+  margin-left: 0.5rem;
+}
+
+.error small {
+  visibility: visible;
+  color: #e07e7e;
+}
+
+.success input {
+  border: 2px solid #79db79;
+}
+
+.error input {
+  border: 2px solid #e07e7e;
+}
+
 /*# sourceMappingURL=index.css.map */

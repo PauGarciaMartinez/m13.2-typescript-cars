@@ -82,3 +82,22 @@ button:hover {
   padding: 0.1rem 0.8rem;
   list-style: none;
 }
+
+// VALIDATION
+small {
+  visibility: hidden;
+  margin-left: 0.5rem;
+}
+
+.error small {
+  visibility: visible;
+  color: #e07e7e;
+}
+
+.success input {
+  border: 2px solid #79db79;
+}
+
+.error input {
+  border: 2px solid #e07e7e;
+}
