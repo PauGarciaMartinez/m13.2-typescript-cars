@@ -21,10 +21,11 @@ const diameter3 = document.querySelector('#wheel-diameter-3') as HTMLInputElemen
 const diameter4 = document.querySelector('#wheel-diameter-4') as HTMLInputElement;
 
 const ul = document.querySelector('.cars-list') as HTMLUListElement;
-const list = new ListTemplate(ul);
+
 
 // THE CAR
 let car: Car;
+const list = new ListTemplate(ul);
 
 // SUBMIT
 carForm.addEventListener('submit', (e: Event) => {
@@ -58,12 +59,3 @@ wheelsForm.addEventListener('submit', (e: Event) => {
   wheelsForm.classList.remove('active');
   wheelsForm.classList.add('inactive');
 })
-
-/* function createCar(plate: string, brand: string, color: string) {
-    let car = new Car(plate, color, brand);
-    car.addWheel(new Wheel(2, "SEAT"));
-    document.body.innerText = "CAR: PLATE: " + car.plate 
-    + " COLOR: " + car.color + " BRAND: " + brand 
-    + " WHEELS: " + JSON.stringify(car.wheels);
-} */
-

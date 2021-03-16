@@ -16,9 +16,9 @@ const diameter2 = document.querySelector('#wheel-diameter-2');
 const diameter3 = document.querySelector('#wheel-diameter-3');
 const diameter4 = document.querySelector('#wheel-diameter-4');
 const ul = document.querySelector('.cars-list');
-const list = new ListTemplate(ul);
 // THE CAR
 let car;
+const list = new ListTemplate(ul);
 // SUBMIT
 carForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -44,10 +44,3 @@ wheelsForm.addEventListener('submit', (e) => {
     wheelsForm.classList.remove('active');
     wheelsForm.classList.add('inactive');
 });
-/* function createCar(plate: string, brand: string, color: string) {
-    let car = new Car(plate, color, brand);
-    car.addWheel(new Wheel(2, "SEAT"));
-    document.body.innerText = "CAR: PLATE: " + car.plate
-    + " COLOR: " + car.color + " BRAND: " + brand
-    + " WHEELS: " + JSON.stringify(car.wheels);
-} */

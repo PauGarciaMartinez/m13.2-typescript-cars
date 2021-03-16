@@ -1,4 +1,4 @@
-import { hasFormatter } from "../interfaces/hasFormatter";
+import { hasFormatter } from '../interfaces/hasFormatter.js';
 
 export class ListTemplate {
   constructor(private container: HTMLUListElement) {}
@@ -21,6 +21,7 @@ export class ListTemplate {
     li.append(h4Bis);
 
     const pBis = document.createElement('p');
+
     pBis.innerText = car.formatWheels();
     li.append(pBis);
 

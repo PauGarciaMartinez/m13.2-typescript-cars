@@ -9,9 +9,16 @@ export class Car {
         this.wheels.push(wheel);
     }
     format() {
-        return `Brand: ${this.brand} - Color: ${this.color} - Plate: ${this.plate}`;
+        return `
+    Brand: ${this.brand}
+    Color: ${this.color}
+    Plate: ${this.plate}`;
     }
     formatWheels() {
-        return `${this.wheels}`;
+        let displayWheels = this.wheels.map((wheel, index) => {
+            return ` 
+      ${index} - Brand: ${wheel.brand} - Diameter: ${wheel.diameter}`;
+        });
+        return displayWheels.toString();
     }
 }
