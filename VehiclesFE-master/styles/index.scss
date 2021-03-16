@@ -26,14 +26,7 @@ body {
 }
 
 // FORM
-.form-container-car {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 1rem;
-}
-
+.form-container-car,
 .form-container-wheels {
   display: flex;
   flex-direction: column;

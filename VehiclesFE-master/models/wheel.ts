@@ -6,5 +6,4 @@ export class Wheel{
         this.diameter = diameter;
         this.brand = brand;
     }
-
 }

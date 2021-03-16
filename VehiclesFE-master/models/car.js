@@ -11,4 +11,7 @@ export class Car {
     format() {
         return `Brand: ${this.brand} - Color: ${this.color} - Plate: ${this.plate}`;
     }
+    formatWheels() {
+        return `${this.wheels}`;
+    }
 }

@@ -1,4 +1,4 @@
-import { Wheel } from './wheel.js'
+import { Wheel } from './wheel.js';
 
 export class Car {
     plate: string;
@@ -17,6 +17,11 @@ export class Car {
     }
 
     format() {
-      return `Brand: ${this.brand} - Color: ${this.color} - Plate: ${this.plate}`
+      return `Brand: ${this.brand} - Color: ${this.color} - Plate: ${this.plate}`;
+    }
+
+    formatWheels() {
+      
+      return `${this.wheels}`;
     }
 }
