@@ -14,14 +14,23 @@ body {
   align-items: center;
   gap: 2rem;
   width: 90%;
+  margin: 0 auto;
 }
 
 // HEADER
 .title {
+  font-size: 3rem;
   text-align: center;
+  color: white;
+  background-color: #e07e7e;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color:#e07e7e;
   text-align: center;
 }
 
@@ -35,8 +44,12 @@ body {
   gap: 1rem;
 }
 
+label {
+  color: rgba(0, 0, 0, 0.698);
+}
+
 input {
-  border: 1px solid black;
+  border: 3px solid rgba(0, 0, 0, 0.171);
   border-radius: 0.2rem;
   height: 1.5rem;
   outline: none;
@@ -45,15 +58,20 @@ input {
 }
 
 button {
-  border: 1px solid black;
+  color: white;
+  font-weight: 600;
+  background-color: #e07e7e;
+  border: 0px solid rgb(255, 255, 255);
   border-radius: 0.2rem;
   height: 2rem;
   outline: none;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: rgb(66, 66, 66);
+  background-color: #ec7272;
   color: white;
 }
 
@@ -77,7 +95,8 @@ button:hover {
 }
 
 .cars-list li {
-  background-color:rgb(231, 231, 231);
+  background-color:#e07e7e44;
+  color: rgba(0, 0, 0, 0.698);
   border-radius: 0.5rem;
   padding: 0.1rem 0.8rem;
   list-style: none;
@@ -85,19 +104,20 @@ button:hover {
 
 // VALIDATION
 small {
-  visibility: hidden;
-  margin-left: 0.5rem;
+  display: none;
+  margin-bottom: -0.5rem;
 }
 
 .error small {
-  visibility: visible;
+  display: flex;
+  justify-content: flex-end;
   color: #e07e7e;
 }
 
 .success input {
-  border: 2px solid #79db79;
+  border: 3px solid #79db79;
 }
 
 .error input {
-  border: 2px solid #e07e7e;
+  border: 3px solid #e07e7e;
 }

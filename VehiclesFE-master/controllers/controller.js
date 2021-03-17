@@ -73,7 +73,7 @@ function validateWheelsInputs() {
     const diameter3 = document.querySelector('#wheel-diameter-3');
     const diameter4 = document.querySelector('#wheel-diameter-4');
     const nameRegex = new RegExp(/[ña-z]{2,25}/gi);
-    const sizeRegex = new RegExp(/^0(\.[4-9])|1(\.[1-9])?|2$/gi);
+    const sizeRegex = new RegExp(/^0(\.[4-9])$|^1(\.[1-9])?$|^2$/gi);
     if (!wheel1.value.match(nameRegex)) {
         setErrorFor(wheel1, "Brand is not valid");
     }
