@@ -28,8 +28,8 @@ function validateCarInputs(): void {
   const brand = document.querySelector('#brand') as HTMLInputElement;
   const color = document.querySelector('#color') as HTMLInputElement;
 
-  const nameRegex = new RegExp(/[ña-z]{2,25}/gi);
-  const plateRegex = new RegExp(/[0-9]{4}[ña-z]{3}/gi);
+  const nameRegex = new RegExp(/^[ña-z]{2,25}\s?[ña-z]{2,25}$/gi);
+  const plateRegex = new RegExp(/^[0-9]{4}[ña-z]{3}$/gi);
 
   if (!plate.value.match(plateRegex)) {
     setErrorFor(plate, "Plate is not valid");
@@ -87,7 +87,7 @@ function validateWheelsInputs(): void {
   const diameter4 = document.querySelector('#wheel-diameter-4') as HTMLInputElement;
 
   const nameRegex = new RegExp(/[ña-z]{2,25}/gi);
-  const sizeRegex = new RegExp(/[0-9]{2,25}/gi);
+  const sizeRegex = new RegExp(/^0(\.[4-9])|1(\.[1-9])?|2$/gi);
 
   if (!wheel1.value.match(nameRegex)) {
     setErrorFor(wheel1, "Brand is not valid");
