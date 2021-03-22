@@ -18,15 +18,14 @@ export class Car {
 
   format() {
     return `
-    Brand: ${this.brand}
-    Color: ${this.color}
-    Plate: ${this.plate}`;
+    <p>Brand: ${this.brand}</p>
+    <p>Color: ${this.color}</p>
+    <p>Plate: ${this.plate}</p>`;
   }
 
   formatWheels() {
     let displayWheels = this.wheels.map((wheel, index) => {
-      return ` 
-      ${++index} - Brand: ${wheel.brand} - Diameter: ${wheel.diameter}`;
+      return `<p>${++index} - Brand: ${wheel.brand} - Diameter: ${wheel.diameter}</p>`;
     })
     return displayWheels.toString();
   }
